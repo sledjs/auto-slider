@@ -1,3 +1,5 @@
+'use strict';
+
 let log = require('@sled/log');
 
 module.exports = class AutoSlider {
