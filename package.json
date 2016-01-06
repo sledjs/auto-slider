@@ -1,6 +1,6 @@
 {
   "name": "@sled/auto-slider",
-  "version": "0.1.0-beta",
+  "version": "0.1.1-beta",
   "description": "precise automatic swiper",
   "main": "index.js",
   "repository": {

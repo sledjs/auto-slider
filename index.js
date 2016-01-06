@@ -1,6 +1,6 @@
-import log from '@sled/log';
+let log = require('@sled/log');
 
-export default class AutoSlider {
+module.exports = class AutoSlider {
   constructor($core) {
     this.work = false;
     this.interval = 1000;
@@ -60,4 +60,4 @@ export default class AutoSlider {
     this.work = false;
     clearInterval(this.heart);
   }
-}
+};
