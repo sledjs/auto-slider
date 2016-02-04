@@ -8,9 +8,11 @@ module.exports = class AutoSlider {
     this.interval = 1000;
 
     this.slides = $core.modules.slides;
+
+    this.slides.on('change', n => this.restart());
     if (!$core.domModules.autoSlider) {
       log(`[${$core.id}]`, '[ modules-dom ]', 'missing autoSlider');
-    }else {
+    } else {
       this.autoSlider = $core.domModules.autoSlider.firstElementChild;
       log(`[${$core.id}]`, '[ modules-dom ]', 'succesfully integrate with dom-autoSlider');
     }
