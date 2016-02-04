@@ -5,11 +5,11 @@ let log = require('@sled/log');
 module.exports = class AutoSlider {
   constructor($core) {
     this.work = false;
-    this.interval = 1000;
+    this.interval = 5000;
 
     this.slides = $core.modules.slides;
-
     this.slides.on('change', n => this.restart());
+
     if (!$core.domModules.autoSlider) {
       log(`[${$core.id}]`, '[ modules-dom ]', 'missing autoSlider');
     } else {
@@ -44,7 +44,7 @@ module.exports = class AutoSlider {
             this.autoSlider.style.width = '100%';
           });
         }
-      }, (this.interval = interval || this.interval) + 25);
+      }, (interval || this.interval) + 25);
     }
   }
 
